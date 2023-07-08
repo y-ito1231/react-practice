@@ -3,23 +3,15 @@ import './style.css';
 import Box from '@mui/material/Box';
 
 export default function App() {
-  // const weather = async () => {
-  //   const response = await fetch(
-  //     `https://api.open-meteo.com/v1/forecast?latitude=35.6785&longitude=139.6823&hourly=temperature_2m&timezone=Asia%2FTokyo`
-  //   );
-  //   return response.json();
-  // };
-  // console.log(weather());
-
   fetch(
     `https://api.open-meteo.com/v1/forecast?latitude=35.6785&longitude=139.6823&hourly=temperature_2m&timezone=Asia%2FTokyo`
   )
     .then((response) => response.json())
     .then((response) => console.log(response));
 
-  fetch(`localhost:3001/number`)
-    .then((response) => response.json())
-    .then((response) => console.log(response));
+  // fetch(`https://letspractice-react3.free.beeceptor.com/test`)
+  //   .then((response) => response.json())
+  //   .then((response) => console.log(response));
 
   return (
     <div>
